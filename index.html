@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Backbone Cellar</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+
+<div id="header">
+<header><span class="title">Backbone Cellar</span> 
+	<div id="right">
+      	<form class="form-search">
+ 		<input type="text" class="input-medium search-query">
+  		<button type="submit" class="btn">Search</button>
+		</form>
+    </div></header>
+    
+   <div id="main-menu">
+    <nav>
+          <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li><a href="#">Wines</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav> </div>
+    
+   
+</div>
+
+<div id="sidebar"></div>
+
+<div id="content">
+<div class="hero-unit">
+  <h1>Welcome to Backbone Cellar</h1>
+  <p>This is a sample application part of of three-part tutorial showing how to build a CRUD application with Backbone.js.</p>
+  <p>
+    <a class="btn btn-primary btn-large" href="#">
+      Learn more
+    </a>
+  </p>
+</div>
+
+</div>
+
+<!-- Templates -->
+<script type="text/template" id="tpl-wine-list-item">
+	<a href="#wines/<%= id %>"><%= name %></a>
+</script>
+
+<script type="text/template" id="tpl-wine-details">
+    <div class="form-left-col">
+        <label>Id:</label>
+        <input type="text" id="wineId" name="id" value="<%= id %>" disabled />
+        <label>Name:</label>
+        <input type="text" id="name" name="name" value="<%= name %>" required/>
+        <label>Grapes:</label>
+        <input type="text" id="grapes" name="grapes" value="<%= grapes %>"/>
+        <label>Country:</label>
+        <input type="text" id="country" name="country" value="<%= country %>"/>
+        <label>Region:</label>
+        <input type="text" id="region" name="region"  value="<%= region %>"/>
+        <label>Year:</label>
+        <input type="text" id="year" name="year"  value="<%= year %>"/>
+    </div>
+    <div class="form-right-col">
+        <img height="300" src="pics/<%= picture %>"/>
+        <label>Notes:</label>
+        <textarea id="description" name="description"><%= description %></textarea>
+		<label>Pairs With:</label>
+        <input type="text" id="pairswith" name="pairswith"  value="<%= pairswith %>"/>
+    </div>
+</script>
+
+<!-- JavaScript -->
+<script src="lib/jquery-1.7.1.min.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/backbone-min.js"></script>
+<script src="js/main.js"></script>   
+
+</body>
+</html>
